@@ -1,0 +1,48 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgrey;
+    min-width: 15em;
+    margin-bottom: 2em;
+}
+
+
+.l-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+    padding-top: 2em;       
+
+}
+
+.c-card{
+        
+    display: flex;
+    flex-direction: column;
+    max-width:20em;
+    margin-top: 5em;
+    margin: 0 auto;
+
+    &__picture{
+        padding: 2em 2em 2em 2em;
+        background-color: white;
+        margin-top: 0;
+        margin-bottom: 2em;
+        
+    }
+    &__tagline{
+
+    }
+    &__text{
+
+    }
+
+
+}

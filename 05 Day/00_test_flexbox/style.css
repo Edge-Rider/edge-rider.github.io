@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    justify-content:space-around;
+    background-color: green;
+    height: 3em;
+}
+.divs{
+    
+    display: flex;
+    /* flex-grow: 0.2; */
+
+    background-color: red;
+    height: 2em;
+    align-items: center;
+    margin: auto;
+    /* justify-content: flex-start; */
+}

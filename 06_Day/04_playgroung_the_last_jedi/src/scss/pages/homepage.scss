@@ -1,0 +1,204 @@
+$bg_color:$alto;
+$bottom_border_color:$nobel;
+
+section{
+    background-color: $bg_color;
+    border-bottom: 1px solid $bottom_border_color;
+    // why overflow?
+    overflow: auto;
+    padding: 1em;
+
+    > h2 {
+        text-align: center;
+    }
+
+    > div{
+        width: $content_width;
+        margin: 0 auto;
+    }
+    //welcome section
+    // use of &? 
+    &.welcome{
+        background: transparent url('../img/welcome.jpg') center center/cover no-repeat scroll;
+        
+        > div {
+            display: flex;
+            flex-direction: column;
+            padding: 4em;
+            align-items: center;
+            justify-content: center;
+            //used variable instead of hex
+            color: $white ;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: normal;
+            margin: 0;
+
+        }
+
+        .subtitle{
+            font-size: 2em;
+            opacity: 0.7;
+        }
+    
+    }
+
+    &.plot{
+        > div{
+            display: flex;
+            padding: 1em 0;
+        }
+
+        .poster{
+            height: 20em;
+            margin-right: 1.5em;
+        }
+
+        .tagline{
+            font-size: 1.5em;
+        }
+
+        p{
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+    }
+
+    &.characters{
+        min-height: 30em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent url('/img/rey-standing.jpg') center center/cover no-repeat scroll;
+
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //why font size modified img dimension?
+            font-size: 0.6em;
+
+            img{
+                margin: 0 0.25em;
+                //why eight made all picture same dimension?
+                height: 8em;
+                width:auto;
+                border-radius: 50%;
+
+            
+                &.bigger{
+                    font-size: 1.25em;
+
+                }
+
+                &.big{
+                    font-size: 1.5em;
+                }
+
+                &.main{
+                    font-size: 1.75em;
+                }
+            }
+        }
+    }
+
+    &.ratings{
+        display: flex;
+        flex-direction: column;
+
+        > div{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+        
+            .rating{
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                align-items: center;
+            }
+            .bar{
+                background-color: gray;
+                width: 8em;
+            }
+
+        }
+
+    }
+    &.cast {
+        .main {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1em;
+
+            img {
+                width: 80em;
+                margin-right: 1em;
+            }
+
+            p {
+                line-height: 1.5em;
+            }
+        }
+
+        .others{
+            display: flex;
+            align-items: space-between;
+
+            .person{
+                margin-right: 0.25em;
+                position: relative;
+
+                img{
+                    width: 7em;;
+                }
+
+                .name {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 0.25em 0;
+                    background: rgba(0,0,0,0.5);
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+    &.gallery {
+        padding-left: 0;
+        padding-right: 0;
+       
+
+        > div {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30em;
+            background: transparent url('/img/gallery.jpg') center center/cover no-repeat scroll;    
+            padding: 0 1em;
+        }
+
+        .left,
+        .right {
+            display: block;
+            font-size: 2em;
+            width: 2em;
+            height: 2em;
+            padding: 0.5em 0;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    
+
+}

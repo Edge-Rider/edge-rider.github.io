@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Documentation page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+ 
+    <body>
+        <nav>
+            <h1>MDN - Flexbox</h1>
+            <a href="#intro">Intro</a>
+            <a href="#why">Why Flexbox</a>
+            <a href="#specify">Specifying elements as flexible boxes</a>
+            <a href="#model">An aside on the flex model</a>
+            <a href="#columns">Columns or rows</a>
+            <a href="#wrapping">Wrapping</a>
+        </nav>
+ 
+        <main>
+            <section id="intro">
+                <h1>Intro</h1>
+                <p>Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.</p>
+            </section>
+ 
+            <section id="why">
+                <h1>Why Flexbox</h1>
+                <p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like floats and positioning. These are fine and they work, but in some ways they are also rather limiting and frustrating.</p>
+                <p>The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:</p>
+                <ul>
+                    <li>Vertically centering a block of content inside its parent.</li>
+                    <li>Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
+                    <li>Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.</li>
+                </ul>
+            </section>
+ 
+            <section id="specify">
+                <h1>Specifying elements as flexible boxes</h1>
+                <p>To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the article elements, so we set this on the section (which becomes a flex container):</p>
+                <code>section {display: flex;}</code>
+                <p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this. More on those later.</p>
+            </section>
+ 
+            <section id="model">
+                <h1>An aside on the flex model</h1>
+                <ul>
+                    <li>The main axis is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end.</li>
+                    <li>The cross axis is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the cross start and cross end.</li>
+                    <li>The parent element that has <code>display: flex</code> set on it (the section in our example) is called the flex container.</li>
+                    <li>The items being laid out as flexible boxes inside the flex container are called flex items (the article elements in our example).</li>
+                </ul>
+            </section>
+ 
+            <section id="columns">
+                <h1>Columns or rows</h1>
+                <p>Flexbox provides a property called flex-direction that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
+                <code>flex-direction: column;</code>
+                <code>flex-direction: row;</code>
+            </section>
+ 
+            <section id="wrapping">
+                <h1>Wrapping</h1>
+                <p>One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our flexbox-wrap0.html example, and try viewing it live (take a local copy of this file now if you want to follow along with this example):</p>
+                <p>Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your section rule:</p>
+                <code>flex-wrap: wrap;</code>
+                <p>We now have multiple rows — as many flexbox children are fitted onto each row as makes sense, and any overflow is moved down to the next line. The flex: 200px declaration set on the articles means that each will be at least 200px wide; we'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.</p>
+                <p>But there's more we can do here. First of all, try changing your flex-direction property value to row-reverse — now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.</p>
+            </section>
+        </main>
+    </body>
+</html> 

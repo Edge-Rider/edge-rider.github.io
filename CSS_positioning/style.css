@@ -1,0 +1,14 @@
+*{
+border: 1px solid black;
+margin: 10px;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.nav{
+    display: inline-block;
+    margin-right: -100%;
+
+}

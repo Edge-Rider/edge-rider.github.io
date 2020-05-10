@@ -1,0 +1,30 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+div {
+    width: 40%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    margin: 24px auto;
+}
+ 
+div:first-child {
+    background-image: url('../img/animal.jpg');
+}
+ 
+div:nth-child(2) {
+    /* Your URL might look differently, depending on its location */
+    background-image: url('../img/nature/nature.jpg');
+}
+ 
+img {
+    display: block;
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+    margin: 24px auto;
+}

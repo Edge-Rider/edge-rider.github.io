@@ -1,0 +1,48 @@
+html, body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+   
+  h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 8vh;
+    font-variant: small-caps;
+    text-align: center;
+    text-shadow: 3px 3px #FF0000;
+  }
+   
+  h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+  }
+   
+  h2:nth-child(3) {
+    text-transform: uppercase;
+  }
+   
+  h2:nth-child(5) {
+    font-weight: 300;
+    text-align: right;
+  }
+   
+  p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+   
+  p:nth-child(4) {
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+   
+  p:nth-child(6) {
+    line-height: 1.8;
+    text-align: justify;
+    text-indent: 40px;
+  }
+   
+  p:last-child {
+    text-decoration: line-through;
+    text-decoration-style: wavy;
+  }
