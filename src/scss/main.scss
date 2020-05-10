@@ -1,0 +1,24 @@
+a {
+    font-size: large;
+    color: red;
+}
+
+.test{
+    border: 1px solid red;
+    //width: 100px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-image: url("/img/city.jpg");
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: right top;
+}
+.test2{
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    background: linear-gradient(0deg, red, yellow); /* Standard syntax */
+}
