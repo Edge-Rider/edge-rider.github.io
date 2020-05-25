@@ -1,0 +1,50 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    transition: 400ms;
+}
+
+.on{
+    background-color: green;
+    width: 400px;
+}
+
+.border{
+    border : 5px solid black;
+    transform: translateX(200px);
+    /*
+    transform: scale(1.2);
+    */
+}
+
+.rotate{
+    
+    transform: rotateZ(90deg);
+}
+body{
+    perspective: 600px;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    50%{
+        transform: translateX(600px) rotateZ(180deg);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.loop{
+    animation: spin 3s linear infinite;
+}
+/*
+.loop{
+    animation: spin 3s ease-in infinite;
+}
+*/

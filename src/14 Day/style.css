@@ -1,0 +1,28 @@
+.container-calculator{
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: 2px solid black;
+    margin: 0.5em;
+}
+
+.first{
+    background-color: black;
+    color: white;
+    text-align: end;
+
+}
+.second{
+    
+    text-align: end;
+
+}
